@@ -159,4 +159,5 @@ Contributions are welcome! Follow these steps to contribute:
 
 ## License
 
+This project is licensed under the ## License
 This project is licensed under the [MIT License](LICENSE). Use at your own risk. The author assumes no liability for damages or issues caused by the use of this script.
