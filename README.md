@@ -18,7 +18,23 @@ A simple Python script to test audio and video output under PipeWire. The script
    cd pipewire-audio-video-test
    ```
 
-2. Run the script:
+2. Ensure that PipeWire is properly set up on your system. 
+
+### For Fedora:
+   ```bash
+   sudo dnf install pipewire pipewire-pulseaudio
+   systemctl --user enable pipewire pipewire-pulse
+   systemctl --user start pipewire pipewire-pulse
+   ```
+
+### For Arch Linux:
+   ```bash
+   sudo pacman -S pipewire pipewire-pulse
+   systemctl --user enable pipewire pipewire-pulse
+   systemctl --user start pipewire pipewire-pulse
+   ```
+
+3. Run the script:
    ```bash
    python pipewire_audio_video_test.py
    ```
