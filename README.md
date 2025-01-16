@@ -1,7 +1,3 @@
-# pipewire-audio-video-test
-Pipewire AudioVideoTesting
-
-
 # PipeWire Audio and Video Test
 
 A simple Python script to test audio and video output under PipeWire. The script generates a sine wave for the audio test and displays a test image for the video test.
@@ -35,6 +31,8 @@ A simple Python script to test audio and video output under PipeWire. The script
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+**Disclaimer**: Use this script at your own risk. The author assumes no liability for any damages or issues caused by its use. Ensure you understand and verify the functionality before using it in critical environments.
 
 ---
 
