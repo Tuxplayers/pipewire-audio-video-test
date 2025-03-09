@@ -65,7 +65,7 @@ systemctl --user restart pipewire pipewire-pulse
 
 Clone the repository and navigate into it:
 ```bash
-git clone https://github.com/TUXPLAYER/pipewire-audio-video-test.git
+git clone https://github.com/tuxplayers/pipewire-audio-video-test.git
 cd pipewire-audio-video-test
 ```
 
