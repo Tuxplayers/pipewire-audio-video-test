@@ -161,3 +161,4 @@ Contributions are welcome! Follow these steps to contribute:
 
 This project is licensed under the ## License
 This project is licensed under the [License](LICENSE). Use at your own risk. The author assumes no liability for damages or issues caused by the use of this script.
+Test So 5. Okt 14:35:36 CEST 2025
