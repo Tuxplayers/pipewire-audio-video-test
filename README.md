@@ -1,163 +1,91 @@
-# PipeWire Audio- und Videotest (HIER TESTEINTRAG  So 5. Okt 14:47:12 CEST 2025)
+# PipeWire Audio and Video Test
+
 ## Introduction
 
-This project provides a Python script to test audio and video functionalities under **PipeWire**. It plays a sine wave for audio testing and displays a test image for video testing.
+This repository was created as a small test project while learning and experimenting with GitHub, Linux, Python, and PipeWire.
+
+The original idea was to create a simple test program for checking basic audio and video functionality under PipeWire.
+
+This was an experimental learning project and was **never intended to be a finished, production-ready, or actively maintained software project**.
 
 ---
 
-## Table of Contents
+## Project Status
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+**Status: Experimental / Archived**
 
----
+This repository is preserved mainly as documentation of an early GitHub experiment.
 
-## Features
+The original executable/script file is no longer included in the repository.
 
-- **Audio Test**: Generates a 440 Hz sine wave (A4 note) and plays it for 5 seconds.
-- **Video Test**: Displays a gradient test image with text overlay.
-- Fully compatible with **PipeWire**.
+The README describes the original project idea and contains example code for educational and experimental purposes.
 
 ---
 
-## Prerequisites
+## Original Project Idea
 
-### Required Software
+The original test was intended to provide basic functionality such as:
 
-- **Python 3.6+**
-- **PipeWire** installed and running on your system.
+- **Audio Test:** Generate and play a 440 Hz sine wave (A4).
+- **Video Test:** Display a simple test image with a text overlay.
+- **PipeWire:** Use the Linux PipeWire audio infrastructure.
+- **Python:** Use Python together with common audio and video libraries.
 
-### Python Dependencies
+The original Python concept used libraries such as:
 
-Install the required Python libraries:
+- `sounddevice`
+- `numpy`
+- `opencv-python`
+
+---
+
+## Important Notice
+
+The code in this repository is provided for **educational and experimental purposes only**.
+
+If you copy, modify, compile, execute, or otherwise use any code from this repository, **you do so at your own responsibility and risk**.
+
+The author does not guarantee that the examples will work on your particular system, Linux distribution, PipeWire configuration, Python version, hardware, or software environment.
+
+Anyone using or modifying the code should understand what the code does and should test it in their own environment before using it.
+
+**Copying and pasting code does not transfer responsibility to the author.**
+
+Every user is responsible for checking, adapting, testing, and safely using any code they copy from this repository.
+
+---
+
+## Example Bash Script
+
+The following is a simple example of the kind of Linux test/automation script used during experimentation.
+
+It is **not the missing original PipeWire Python program** and should not be interpreted as such.
+
 ```bash
-pip install sounddevice numpy opencv-python
-```
+#!/bin/bash
+#
+# Maker:        Heiko Schäfer (TUXPLAYER)
+# Datum:        $(date '+%d.%m.%Y')
+# Zeit:         $(date '+%H:%M:%S')
+# Version:      1.0
+# Beschreibung: Beispiel eines einfachen Linux-Testskripts
+# Zweck:        System-Optimierung / Automatisierung
+# --------------------------------------------------------------------------
+# "I'm a Maker - All stupid people are bracker in my way"
+#
 
-### PipeWire Configuration
+echo "TUXPLAYER Linux Test Script"
+echo "Datum: $(date '+%d.%m.%Y')"
+echo "Zeit:   $(date '+%H:%M:%S')"
 
-Ensure PipeWire is properly configured with an appropriate sample rate. Modify or create the configuration file:
-```bash
-nano ~/.config/pipewire/pipewire.conf
-```
+echo
+echo "System:"
+uname -a
 
-Set the following values:
-```ini
-default.clock.rate = 48000
-default.clock.allowed-rates = [ 44100 48000 ]
-```
-
-Restart PipeWire:
-```bash
-systemctl --user restart pipewire pipewire-pulse
-```
-
----
-
-## Installation
-
-Clone the repository and navigate into it:
-```bash
-git clone https://github.com/tuxplayers/pipewire-audio-video-test.git
-cd pipewire-audio-video-test
-```
-
----
-
-## Setting Up a Virtual Environment
-
-To ensure a clean and isolated Python environment, create and activate a virtual environment:
-
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   ```
-
-2. Activate the virtual environment:
-   - For Linux/Mac:
-     ```bash
-     source venv/bin/activate
-     ```
-   - For Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-
-3. Install the required dependencies within the virtual environment:
-   ```bash
-   pip install sounddevice numpy opencv-python
-   ```
-
-4. Verify the setup by running the script:
-   ```bash
-   python pipewire_audio_video_test.py
-   ```
-
----
-
-## Usage
-
-Run the script to test audio and video functionalities:
-```bash
-python pipewire_audio_video_test.py
-```
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-#### Invalid Sample Rate Error
-- Ensure PipeWire's sample rate matches the script's sample rate (default: `48000 Hz`).
-- Check the current configuration with:
-  ```bash
-  pactl info | grep "Default Sample Rate"
-  ```
-
-#### Audio Not Playing
-- Verify the default audio sink is correctly configured:
-  ```bash
-  pactl list sinks
-  ```
-
-#### Video Not Displaying
-- Ensure `opencv-python` is installed correctly:
-  ```bash
-  pip install opencv-python
-  ```
-
----
-
-## Contributing
-
-Contributions are welcome! Follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
----
-
-## License
-
-This project is licensed under the ## License
-This project is licensed under the [License](LICENSE). Use at your own risk. The author assumes no liability for damages or issues caused by the use of this script.
-Test So 5. Okt 14:35:36 CEST 2025
+echo
+echo "PipeWire:"
+if command -v pipewire >/dev/null 2>&1; then
+    pipewire --version
+else
+    echo "PipeWire wurde nicht gefunden."
+fi
